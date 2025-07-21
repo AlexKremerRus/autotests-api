@@ -25,6 +25,7 @@ class FilesClient(APIClient):
         """
         return self.get(f"/api/v1/files/{file_id}")
 
+
     def create_file_api(self, request:CreateFileRequestDict) -> Response:
         """
         Метод создания файла.
