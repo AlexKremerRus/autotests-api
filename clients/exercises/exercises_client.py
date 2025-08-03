@@ -3,6 +3,9 @@ from typing import TypedDict
 from clients.api_client import APIClient
 from httpx import Response
 
+from clients.private_http_builder import get_private_http_client, AuthentificationUserDict
+
+
 class CreateExercisesRequestDict(TypedDict):
     """
     Описание структуры запроса на создание файла.
@@ -43,3 +46,5 @@ class ExercisesClient(APIClient):
     def delete_exercise_api(self, exercise_id:str):
         return self.delete(f"/api/v1/exercises/{exercise_id}")
 
+def get_exercises_client(user: AuthentificationUserDict)->ExercisesClient:
+    return ExercisesClient(client=get_private_http_client(user))
