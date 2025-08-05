@@ -5,6 +5,14 @@ from httpx import Response, request
 
 from clients.private_http_builder import get_private_http_client, AuthentificationUserDict
 
+class File(TypedDict):
+    id: str
+    filename: str
+    directory: str
+    url: str
+
+class CreateFileResponseDict(TypedDict):
+    file: File
 
 class CreateFileRequestDict(TypedDict):
     """
@@ -36,9 +44,15 @@ class FilesClient(APIClient):
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.post("/api/v1/files",
+                         json=None,
                          data=request,
                          files={"upload_file": open(request['upload_file'], 'rb')}
                          )
+
+    def create_file(self, request:CreateFileRequestDict) -> CreateFileResponseDict:
+        response = self.create_file_api(request)
+        return response.json()
+
 
     def delete_file_api(self, file_id: str) ->Response:
         """
@@ -48,6 +62,8 @@ class FilesClient(APIClient):
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.delete(f"/api/v1/files/{file_id}")
+
+
 
 def get_files_client(user: AuthentificationUserDict)->FilesClient:
     """
