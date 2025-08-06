@@ -6,12 +6,18 @@ from httpx import Response, request
 from clients.private_http_builder import get_private_http_client, AuthentificationUserDict
 
 class File(TypedDict):
+    """
+    Описание структуры файла.
+    """
     id: str
     filename: str
     directory: str
     url: str
 
 class CreateFileResponseDict(TypedDict):
+    """
+    Описание структуры ответа создания файла.
+    """
     file: File
 
 class CreateFileRequestDict(TypedDict):
