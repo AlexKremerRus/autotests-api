@@ -3,7 +3,7 @@ from typing import TypedDict
 from clients.api_client import APIClient
 from httpx import Response, request
 
-from clients.private_http_builder import get_private_http_client, AuthentificationUserDict
+from clients.private_http_builder import get_private_http_client, AuthentificationUserSchema
 
 class File(TypedDict):
     """
@@ -71,7 +71,7 @@ class FilesClient(APIClient):
 
 
 
-def get_files_client(user: AuthentificationUserDict)->FilesClient:
+def get_files_client(user: AuthentificationUserSchema)->FilesClient:
     """
     Функция создаёт экземпляр FilesClient с уже настроенным HTTP-клиентом.
 
