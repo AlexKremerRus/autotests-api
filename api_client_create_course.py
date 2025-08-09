@@ -1,4 +1,5 @@
-from clients.courses.courses_client import get_courses_client, CreateCoursesRequestDict
+from clients.courses.courses_client import get_courses_client
+from clients.courses.courses_schema import CreateCoursesRequestSchema
 from clients.files.files_client import get_files_client
 from clients.files.files_schema import CreateFileRequestSchema
 from clients.private_http_builder import AuthentificationUserSchema
@@ -37,7 +38,7 @@ create_file_response = files_client.create_file(
 )
 print(create_file_response)
 
-create_course_request = CreateCoursesRequestDict(
+create_course_request = CreateCoursesRequestSchema(
     title='Python',
     maxScore=100,
     minScore=10,
