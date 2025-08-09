@@ -3,9 +3,11 @@ from typing import TypedDict
 from httpx import Response
 
 from clients.api_client import APIClient
-from clients.files.files_client import File
+# from clients.files.files_client import File
+from clients.files.files_schema import FileSchema
 from clients.private_http_builder import AuthentificationUserSchema, get_private_http_client
-from clients.users.private_users_client import User
+from clients.users.users_schema import UserSchema
+
 
 
 class Course(TypedDict):
@@ -14,9 +16,9 @@ class Course(TypedDict):
     maxScore: int
     minScore: int
     description: str
-    previewFile: File
+    previewFile: FileSchema
     estimatedTime: str
-    createdByUser: User
+    createdByUser: UserSchema
 
 class CreateResponseDict(TypedDict):
     course: Course
