@@ -1,7 +1,5 @@
 from clients.authentification.authentification_client import get_authentification_client
 from clients.authentification.authentification_schema import LoginRequestSchema, LoginResponseSchema
-from clients.private_http_builder import AuthentificationUserSchema
-from clients.users.private_users_client import get_private_users_client
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 from http import HTTPStatus
