@@ -30,6 +30,9 @@ class GetCoursesQuerySchema(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     user_id: str = Field(alias='userId')
 
+class GetCoursesResponseSchema(BaseModel):
+    courses: list[CourseSchema]
+
 class CreateCoursesRequestSchema(BaseModel):
     """
     Описание структуры запроса на создание курса.
@@ -56,4 +59,5 @@ class UpdateCoursesRequestSchema(BaseModel):
     description: str | None = Field(default_factory=fake.text)
     estimated_time: str | None = Field(alias='estimatedTime', default_factory=fake.estimated_time)
 
-print(CreateCoursesRequestSchema())
+class UpdateCourseResponseSchema(BaseModel):
+    course: CourseSchema
