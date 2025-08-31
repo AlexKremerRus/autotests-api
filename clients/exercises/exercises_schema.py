@@ -14,7 +14,7 @@ class ExerciseSchema(BaseModel):
 
     id: str
     title: str
-    courseId: str = Field(alias='courseId')
+    course_id: str = Field(alias='courseId')
     max_score: int = Field(alias='maxScore')
     min_score: int = Field(alias='minScore')
     order_index: int | None = Field(alias='orderIndex')
