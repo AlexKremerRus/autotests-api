@@ -36,7 +36,7 @@ class ExercisesClient(APIClient):
         return CreateExerciseResponseSchema.model_validate_json(response.text)
 
     def update_exercise_api(self, exercise_id: str, request: UpdateExercisesRequestSchema ):
-        return self.patch(f"/api/v1/exercises/{exercise_id}",json=request)
+        return self.patch(f"/api/v1/exercises/{exercise_id}",json=request.model_dump(by_alias=True))
 
     def update_exercise(self, exercise_id: str, request: UpdateExercisesRequestSchema ) -> UpdateExerciseResponseSchema:
         response = self.update_exercise_api(exercise_id, request)
