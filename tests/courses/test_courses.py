@@ -3,7 +3,6 @@ from http import HTTPStatus
 import allure
 import pytest
 
-from api_client_create_course import courses_client
 from clients.courses.courses_client import CoursesClient
 from clients.courses.courses_schema import UpdateCoursesRequestSchema, UpdateCourseResponseSchema, \
     GetCoursesQuerySchema, GetCoursesResponseSchema, CreateCoursesRequestSchema, CreateResponseSchema
