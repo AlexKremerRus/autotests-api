@@ -1,3 +1,4 @@
+import allure
 import pytest
 
 from clients.authentification.authentification_client import AuthentificationClient
@@ -12,6 +13,7 @@ from tools.assertions.base import assert_status_code
 @pytest.mark.regression
 @pytest.mark.authentication
 class TestAuthentification:
+    @allure.title("Логин с корректным логином и паролем")
     def test_login(self, function_user: UserFixture, authentification_client: AuthentificationClient):
         login_request = LoginRequestSchema(email=function_user.email, password=function_user.password)
         login_response = authentification_client.login_api(login_request)

@@ -11,12 +11,15 @@ from fixtures.users import UserFixture
 from tools.assertions.schema import validate_json_schema
 from tools.assertions.base import assert_status_code
 from tools.assertions.users import assert_create_user_response, assert_get_user_response
+import allure
 
 @pytest.mark.users
 @pytest.mark.regression
 class TestUsers:
     @pytest.mark.parametrize("email", ["mail.ru", "gmail.com", "example.com"])
+    @allure.title("Создание курса")
     def test_create_user(self, email: str, public_users_client: PublicUsersClient):
+        allure.dynamic.title(f"Попытка создание пользователя с почтой: {email}")
         request = CreateUserRequestSchema()
         response = public_users_client.create_user_api(request)
         response_data = CreateUserResponseSchema.model_validate_json(response.text)
@@ -26,6 +29,7 @@ class TestUsers:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.title("Получение данных обо мне")
     def test_get_user_me(self, function_user: UserFixture, authentification_client: AuthentificationClient,
                          private_users_client: PrivateUsersClient):
         response = private_users_client.get_user_me_api()

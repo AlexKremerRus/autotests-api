@@ -1,10 +1,12 @@
+import allure
+
 from clients.courses.courses_schema import CourseSchema, UpdateCoursesRequestSchema, UpdateCourseResponseSchema, \
     GetCoursesResponseSchema, CreateResponseSchema, CreateCoursesRequestSchema
 from tools.assertions.base import assert_equal, assert_length
 from tools.assertions.files import assert_file
 from tools.assertions.users import assert_user
 
-
+@allure.step("Проверка ответа обновления курса")
 def assert_update_course_response(
         request: UpdateCoursesRequestSchema,
         response: UpdateCourseResponseSchema):
@@ -14,6 +16,7 @@ def assert_update_course_response(
     assert_equal(response.course.description, request.description, "description")
     assert_equal(response.course.estimated_time, request.estimated_time, "estimated_time")
 
+@allure.step("Проверка курса")
 def assert_course(actual: CourseSchema, expected: CourseSchema):
     assert_equal(actual.id, expected.id, "id")
     assert_equal(actual.title, expected.title, "title")
@@ -25,6 +28,7 @@ def assert_course(actual: CourseSchema, expected: CourseSchema):
     assert_file(actual.preview_file, expected.preview_file)
     assert_user(actual.created_by_user, expected.created_by_user)
 
+@allure.step("Проверка ответа на получения курса")
 def assert_get_courses_response(
         get_course_response: GetCoursesResponseSchema,
         create_course_response: list[CreateResponseSchema]
@@ -34,6 +38,7 @@ def assert_get_courses_response(
     for index, create_course_response in enumerate(create_course_response):
         assert_course(get_course_response.courses[index], create_course_response.course)
 
+@allure.step("Проверка ответа на создание курса")
 def assert_create_course_response(
         request: CreateCoursesRequestSchema,
         response: CreateResponseSchema

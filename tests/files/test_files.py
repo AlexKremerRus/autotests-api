@@ -1,5 +1,6 @@
 from http import HTTPStatus
 
+import allure
 import pytest
 
 from clients.errors_schema import ValidationErrorResponseSchema, InternalErrorResponseSchema
@@ -16,6 +17,7 @@ from tools.assertions.schema import validate_json_schema
 @pytest.mark.files
 @pytest.mark.regression
 class TestFiles:
+    @allure.title("Создание файла")
     def test_create_file(self, files_client:FilesClient):
         request = CreateFileRequestSchema(upload_file="./testdata/files/image.png")
                                                         # "testdata/files/image.png"
@@ -26,6 +28,7 @@ class TestFiles:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.title("Получение файла")
     def test_get_file(self, files_client:FilesClient, function_file:FileFixture):
         response = files_client.get_file_api(function_file.response.file.id)
         response_data = GetFileResponseSchema.model_validate_json(response.text)
@@ -35,6 +38,7 @@ class TestFiles:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.title("Создание файла с пустой директорией")
     def test_create_file_with_empty_directory(self, files_client:FilesClient):
         request = CreateFileRequestSchema(
             directory="",
@@ -47,6 +51,7 @@ class TestFiles:
         assert_create_file_with_empty_directory_response(response_data)
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.title("Создание файла с пустым именем ")
     def test_create_file_with_empty_filename(self, files_client:FilesClient):
         request = CreateFileRequestSchema(
             filename="",
@@ -59,6 +64,7 @@ class TestFiles:
         assert_create_file_with_empty_filename_response(response_data)
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.title("Удаление файла ")
     def test_delete_file(self, files_client:FilesClient, function_file:FileFixture):
         delete_response = files_client.delete_file_api(function_file.response.file.id)
         assert_status_code(delete_response.status_code, HTTPStatus.OK)
@@ -71,6 +77,7 @@ class TestFiles:
 
         validate_json_schema(get_response.json(), get_response_data.model_json_schema())
 
+    @allure.title("Получение файла с некорректным файл айди ")
     def test_get_file_with_incorrect_file_id(self, files_client:FilesClient):
         get_response = files_client.get_file_api("incorrect-file-id")
         get_response_data = ValidationErrorResponseSchema.model_validate_json(get_response.text)
