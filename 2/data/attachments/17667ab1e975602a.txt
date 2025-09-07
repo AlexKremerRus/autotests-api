@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTA3VDE3OjAxOjM5LjAyMTk5NiIsInVzZXJfaWQiOiJjMDgyOTk3YS0yMTA1LTQyM2ItOWYxYS1jZjgwYjk1Njg5YTQifQ.1IIjqV3gsgvrKntSsAFPdnoVM-5i0DQWbQ3WyBTXT7s' \
+  -H 'content-length: 473' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Ныне демократия дружно райком слишком очко зима.","maxScore":99,"minScore":4,"description":"Основание порог терапия неудобно забирать. Вариант школьный бетонный костер перебивать научить набор.","estimatedTime":"55 weeks","previewFileId":"e6a32026-fddd-4944-bba6-404bfb629a16","createdByUserId":"c082997a-2105-423b-9f1a-cf80b95689a4"}'

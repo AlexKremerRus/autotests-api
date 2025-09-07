@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTA3VDE3OjAxOjM4LjExMTM1OCIsInVzZXJfaWQiOiJhMWY5ZmE5Yi02YTY1LTRkMjUtYWViMS04Mzc5MTVjYThiY2QifQ.6QbCjYambeYjxFjce8p4rlGs4lUZHaQgvPqJ13wEOvs' \
+  -H 'content-length: 555' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Еврейский крутой за багровый дремать.","maxScore":88,"minScore":7,"description":"Светило соответствие неправда очутиться горький бригада виднеться деловой. Процесс госпожа командир четыре реклама. Понятный космос мотоцикл деньги четыре.","estimatedTime":"100 weeks","previewFileId":"0d44bab0-a2a0-4892-97c0-db7206d52c1d","createdByUserId":"a1f9fa9b-6a65-4d25-aeb1-837915ca8bcd"}'

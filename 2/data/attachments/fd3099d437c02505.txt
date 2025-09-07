@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTA3VDE3OjAxOjM3LjgzODMyNyIsInVzZXJfaWQiOiJkMjU0NGM2ZS00M2Q3LTQ1MGYtYjk3ZS05MTVmMzVlZjg5YWUifQ.PDVl-ES-t1eZ4q1jW6W4rzZ8JB6BxpVMN-L_xrLs784' \
+  -H 'content-length: 579' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Единый блин парень приходить чем процесс.","courseId":"750bff49-63a1-4ccf-af27-559f1f712b45","maxScore":54,"minScore":29,"orderIndex":68,"description":"Спешить прежний гулять постоянный прежде. Валюта выражаться степь.\nИнтернет четко виднеться важный отдел угол. Вариант миллиард скрытый упорно. Призыв нервно второй лететь лиловый танцевать.","estimatedTime":"47 weeks"}'

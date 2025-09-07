@@ -1,0 +1,32 @@
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:29 Make GET request to http://localhost:8000/api/v1/courses?userId=04d8b811-3587-4efc-b549-1088b392e0f2
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/courses?userId=04d8b811-3587-4efc-b549-1088b392e0f2
+INFO     BASE_ASSERTIONS:base.py:11 Проверка статуса кода ответа 200
+INFO     COURSES_ASSERTIONS:courses.py:42 Проверка ответа на получения курса
+INFO     BASE_ASSERTIONS:base.py:37 Проверка что длина courses эквивалентна 1
+INFO     COURSES_ASSERTIONS:courses.py:25 Проверка курса
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что id эквивалентна c4971db6-9750-4a3c-a8db-2257f670be43
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что title эквивалентна Головка а набор освобождение мелькнуть выразить.
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что max_score эквивалентна 87
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что min_score эквивалентна 9
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что description эквивалентна Тревога еврейский куча юный видимо витрина. Тысяча дружно одиннадцать хотеть четыре.
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что estimated_time эквивалентна 60 weeks
+INFO     FILES_ASSERTIONS:files.py:24 Проверка файла
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что id эквивалентна 0eb4b0f6-ba73-4f4f-89f6-2015d5d5e05c
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что filename эквивалентна 9de27c3f-2283-4088-a26f-805be50ecd61.png
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что directory эквивалентна tests
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что url эквивалентна http://localhost:8000/static/tests/9de27c3f-2283-4088-a26f-805be50ecd61.png
+INFO     USERS_ASSERTIONS:users.py:19 Проверка пользователя
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что id эквивалентна 04d8b811-3587-4efc-b549-1088b392e0f2
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что email эквивалентна klavdi_1985@example.net
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что last_name эквивалентна Мамонтов
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что first_name эквивалентна Касьян
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что middle_name эквивалентна Феофанович
+INFO     SCHEMA_ASSERTIONS:schema.py:18 Validating JSON schema

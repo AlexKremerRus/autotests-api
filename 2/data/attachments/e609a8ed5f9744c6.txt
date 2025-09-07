@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTA3VDE3OjAxOjM5LjI5NDg1MyIsInVzZXJfaWQiOiJjMjZkOGQ3OS02ZTZmLTRiYjItYjQ2ZC01OTY2OThlMDg1ZTcifQ.i3pv_2VIFpQt9lBYIKlNZ16z6TMS1NcG_eZ5bRePW9Q' \
+  -H 'content-length: 524' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Результат налево приличный появление.","maxScore":57,"minScore":13,"description":"Картинка заработать мера даль расстройство госпожа. Серьезный головной намерение более. Реклама степь деловой разуметься намерение угроза.","estimatedTime":"49 weeks","previewFileId":"6d447ec3-b301-49bc-9bb6-0b878cf7efab","createdByUserId":"c26d8d79-6e6f-4bb2-b46d-596698e085e7"}'

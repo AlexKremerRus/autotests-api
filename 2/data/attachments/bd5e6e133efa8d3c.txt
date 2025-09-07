@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTA3VDE3OjAxOjM5LjAyMTk5NiIsInVzZXJfaWQiOiJjMDgyOTk3YS0yMTA1LTQyM2ItOWYxYS1jZjgwYjk1Njg5YTQifQ.1IIjqV3gsgvrKntSsAFPdnoVM-5i0DQWbQ3WyBTXT7s' \
+  -H 'content-length: 447' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Пропадать термин видимо сверкающий.","courseId":"8d516147-5fd5-4b99-9a4f-42388635a3ce","maxScore":85,"minScore":2,"orderIndex":13,"description":"Недостаток волк труп. Падать изба командующий похороны райком уронить.\nРасстройство девка провал. При страсть дошлый бабочка.","estimatedTime":"72 weeks"}'

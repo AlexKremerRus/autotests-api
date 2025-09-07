@@ -1,0 +1,17 @@
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 422 Unprocessable Entity from http://localhost:8000/api/v1/files
+INFO     BASE_ASSERTIONS:base.py:11 Проверка статуса кода ответа 422
+INFO     FILES_ASSERTIONS:files.py:56 Проверка ответа на создания файла с пустой директорией
+INFO     ERRORS_ASSERTIONS:errors.py:23 Проверка валидационной ошибки
+INFO     BASE_ASSERTIONS:base.py:37 Проверка что длина details эквивалентна 1
+INFO     ERRORS_ASSERTIONS:errors.py:11 Проверка валидационной ошибки
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что type эквивалентна string_too_short
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что input эквивалентна 
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что context эквивалентна {'min_length': 1}
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что message эквивалентна String should have at least 1 character
+INFO     BASE_ASSERTIONS:base.py:16 Проверка что location эквивалентна ['body', 'directory']
+INFO     SCHEMA_ASSERTIONS:schema.py:18 Validating JSON schema

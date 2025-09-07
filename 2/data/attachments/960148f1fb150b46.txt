@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTA3VDE3OjAxOjM3LjgzODMyNyIsInVzZXJfaWQiOiJkMjU0NGM2ZS00M2Q3LTQ1MGYtYjk3ZS05MTVmMzVlZjg5YWUifQ.PDVl-ES-t1eZ4q1jW6W4rzZ8JB6BxpVMN-L_xrLs784' \
+  -H 'content-length: 518' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Холодно неправда расстройство командующий чувство издали.","maxScore":72,"minScore":15,"description":"Еврейский палата цепочка хозяйка песенка настать.\nСверкающий пламя порог носок. Перебивать славный даль что передо.","estimatedTime":"65 weeks","previewFileId":"ee1aa647-9453-4d0c-9874-80be26fd917e","createdByUserId":"d2544c6e-43d7-450f-b97e-915f35ef89ae"}'
